@@ -43,3 +43,18 @@ h1:hover {
     font-weight: bold;
 }
 
+.inputForm input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    max-width: 50%;
+    background-color: rgb(141, 240, 243);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 2rem;
+    margin: auto;
+}
