@@ -21,7 +21,7 @@ const userGetFunction = (name) => {
         .catch((err) => {
             if (
                 err.response.status ==
-                 400) {
+                 404) {
                     errorFunction(
                         "No profile with this username");}});}
 const repoGetFunction = (name) => {
