@@ -1,4 +1,4 @@
-document.head.appendChild(fetch);
+// Removed invalid fetch append
 let main = document.getElementById("main");
 let inputForm = document.getElementById("userInput");
 let inputBox = document.getElementById("inputBox");
@@ -61,9 +61,9 @@ const errorFunction = (error) => {
 }
 
 const repoCardFunction = (repos) => {
-    let reposElement = 
-    document.getElementById(
-        "repos");
+    let reposElement = document.getElementById("repos");
+    // Clear previous repos before adding new ones
+    reposElement.innerHTML = "";
     for (let i = 0; i < 5 && i < repos.length; i++) {
         let repo = repos[i];
         let repoEl = document.createElement("a");
@@ -71,7 +71,9 @@ const repoCardFunction = (repos) => {
         repoEl.href = repo.html_url;
         repoEl.target = "_blank";
         repoEl.innerText = repo.name;
-        reposElement.appendChild(repoEl);}}
+        reposElement.appendChild(repoEl);
+    }
+}
 inputForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let user = inputBox.value;
